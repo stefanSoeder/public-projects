@@ -1,3 +1,3 @@
-import { initTemplate } from "./src/utils/initTemplate";
+import { initTemplate } from "./src/utils";
 import "./style.css";
 initTemplate();
