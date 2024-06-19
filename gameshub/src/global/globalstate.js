@@ -15,7 +15,7 @@ si recargo sería "" STRING vacio por lo cual cuando recargo en este caso lo que
 el sessionStorage existe currentUser y se existir lo setea en este objeto
  */
 
-const currenUser = {
+const currentUser = {
   name: sessionStorage.getItem("currentUser")
     ? sessionStorage.getItem("currentUser")
     : " ",
