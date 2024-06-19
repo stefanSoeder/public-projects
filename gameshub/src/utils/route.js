@@ -1,4 +1,4 @@
-import { getUser } from "../global/globalstate";
+import { getUser } from "../global/state/globalstate";
 import { Login, PrintPokemonPage, printTemplateDashboard } from "../pages";
 
 //! ----------------------------------------------------------------------------------------------------------------------

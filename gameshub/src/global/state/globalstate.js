@@ -26,7 +26,7 @@ practicamente igual que lo que se settea en el local storage para guardar sus fa
  */
 
 let userData = localStorage.getItem(currentUser.name)
-  ? JSON.parse(localStorage.getItem(currenUser.name))
+  ? JSON.parse(localStorage.getItem(currentUser.name))
   : {
       name: "",
       token: false,
@@ -54,12 +54,12 @@ const dataGlobal = {
 
 //! -------------------- SET Y GET  currentUser ----------------
 
-export const setUSer = (username) => {
+export const setUser = (username) => {
   currentUser.name = username;
 };
 
 export const getUser = () => {
-  return currenUser;
+  return currentUser;
 };
 
 //! -------------------- SET y GET dataGlobal----------------
@@ -67,7 +67,7 @@ export const getUser = () => {
 export const setData = (data, page) => {
   switch (page) {
     case "Pokemon":
-      return dataGlobal.pokemon;
+      return (dataGlobal.pokemon = data);
     default:
       break;
   }
