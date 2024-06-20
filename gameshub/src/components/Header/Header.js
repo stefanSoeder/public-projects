@@ -36,11 +36,11 @@ const addListeners = () => {
     const color = changeColorRGB();
     document.body.style.background = color;
   });
-  const buttonDashboard = () => document.getElementById("buttonDashboard");
+  const buttonDashboard = document.getElementById("buttonDashboard");
   buttonDashboard.addEventListener("click", (e) => {
     initControler("Dashboard");
   });
-  const logout = document.getElementById("logout");
+  const logout = document.getElementById("buttonLogout");
   logout.addEventListener("click", (e) => {
     const userState = getUser().name;
     const currentUser = localStorage.getItem(userState);
@@ -56,4 +56,5 @@ const addListeners = () => {
 
 export const PrintTemplateHeader = () => {
   document.querySelector("header").innerHTML = template();
+  addListeners();
 };
