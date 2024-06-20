@@ -1,3 +1,6 @@
+import { getUser } from "../../global/state/globalstate";
+import { printTemplateDashboard } from "../../pages";
+import { changeColorRGB, initControler } from "../../utils";
 import "./Header.css";
 
 //!-------------------------------------------------------------------
@@ -27,7 +30,29 @@ const template = () => `<img
     />
   </nav>`;
 
-const addEventListeners = () => {};
+const addListeners = () => {
+  const changeColor = document.getElementById("changeColor");
+  changeColor.addEventListener("click", (e) => {
+    const color = changeColorRGB();
+    document.body.style.background = color;
+  });
+  const buttonDashboard = () => document.getElementById("buttonDashboard");
+  buttonDashboard.addEventListener("click", (e) => {
+    initControler("Dashboard");
+  });
+  const logout = document.getElementById("logout");
+  logout.addEventListener("click", (e) => {
+    const userState = getUser().name;
+    const currentUser = localStorage.getItem(userState);
+    const parseCurrentUser = JSON.parse(currentUser);
+    const updateUser = { ...parseCurrentUser, token: false };
+    const stringUpdateUser = JSON.stringify(updateUser);
+    localStorage.removeItem(userState);
+    sessionStorage.removeItem("currentUser");
+    localStorage.setItem(userState, stringUpdateUser);
+    initControler("Login");
+  });
+};
 
 export const PrintTemplateHeader = () => {
   document.querySelector("header").innerHTML = template();
