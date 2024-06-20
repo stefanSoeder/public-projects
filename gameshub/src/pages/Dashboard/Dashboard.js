@@ -35,9 +35,9 @@ const template = () => `
   </div>
 `;
 
-const addEventListeners = () => {
+const addListeners = () => {
   const navigatePokemon = document.getElementById("navigatePokemon");
-  navigatePokemon.addEventListener("click", () => {
+  navigatePokemon.addEventListener("click", (e) => {
     initControler("Pokemon");
   });
 };
@@ -45,5 +45,5 @@ const addEventListeners = () => {
 export const printTemplateDashboard = () => {
   document.querySelector("main").innerHTML = template();
   document.querySelector("nav").style.display = "flex";
-  addEventListeners;
+  addListeners();
 };
