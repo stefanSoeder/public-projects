@@ -8,23 +8,23 @@ import "./Header.css";
 //!-------------------------------------------------------------------
 
 const template = () => `<img
-    src="https://res.cloudinary.com/dq186ej4c/image/upload/v1682679162/header_giqdug.jpg"
+    src="https://res.cloudinary.com/dhu1it9x8/image/upload/t_GamesHubSize/v1706566872/FantasyHub_bkop7g.png"
     alt="title hub game website (app)"
     class="logo"
   />
   <nav>
     <img
-      src="https://res.cloudinary.com/dq186ej4c/image/upload/v1682684561/changeColor_tat29q.png"
+      src="https://res.cloudinary.com/dhu1it9x8/image/upload/t_GamesHubSize/v1706555952/paleta-de-color_dcce5a.png"
       alt=" change to style mode page"
       id="changeColor"
     />
     <img
-      src="https://res.cloudinary.com/dq186ej4c/image/upload/v1682685633/home_nekvs0.png"
+      src="https://res.cloudinary.com/dhu1it9x8/image/upload/t_GamesHubSize/v1706555707/mundial_qoe25m.png"
       alt=" navigate to home app"
       id="buttonDashboard"
     />
     <img
-      src="https://res.cloudinary.com/dq186ej4c/image/upload/v1682679055/logout_arz0gw.png"
+      src="https://res.cloudinary.com/dhu1it9x8/image/upload/t_GamesHubSize/v1706556255/salida_p0tfgc.png"
       alt="logout"
       id="buttonLogout"
     />
