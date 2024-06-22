@@ -5,7 +5,7 @@ import "./Login.css";
 const template = () => `
   <div id="containerLogin">
     <h1 id="titleLogin">Who´s knocking?</h1>
-    <input type="text" name="username" id="username" placeholder="Your name, or just leave empty" />
+    <input type="text" name="username" id="username" placeholder="Enter your name, or leave empty" />
     <button id="buttonLogin">That´s Me!</button>
   </div>
 `;

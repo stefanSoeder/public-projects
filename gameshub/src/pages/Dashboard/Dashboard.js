@@ -23,7 +23,7 @@ const template = () => `
         </figure>
       </li>
       <li>
-        <figure>
+        <figure id="navigateQuiz">
           <img
             src="https://res.cloudinary.com/dhu1it9x8/image/upload/v1706558125/libros-de-texto_nuzhc0.png"
             alt="go to fantasy quiz game"
@@ -39,6 +39,10 @@ const addEventListeners = () => {
   const navigatePokemon = document.getElementById("navigatePokemon");
   navigatePokemon.addEventListener("click", () => {
     initControler("Pokemon");
+  });
+  const navigateQuiz = document.getElementById("navigateQuiz");
+  navigateQuiz.addEventListener("click", (e) => {
+    initControler("Quiz");
   });
 };
 
