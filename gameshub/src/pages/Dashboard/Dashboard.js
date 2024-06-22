@@ -1,4 +1,5 @@
-import { initControler } from "../../utils";
+// Dashboard.js -----> src/pages/Dashboard/Dashboard.js
+import { getInfo, initControler } from "../../utils";
 import "./Dashboard.css";
 
 const template = () => `
@@ -35,15 +36,29 @@ const template = () => `
   </div>
 `;
 
-const addListeners = () => {
+const addEventListeners = () => {
+  /** le damos el evento al boton de pokemon que es la unica pagina de contenido por
+   * ahora esta creada en el proyecto
+   */
   const navigatePokemon = document.getElementById("navigatePokemon");
-  navigatePokemon.addEventListener("click", (e) => {
+  navigatePokemon.addEventListener("click", () => {
     initControler("Pokemon");
   });
 };
 
 export const printTemplateDashboard = () => {
+  /** Como siempre las paginas se renderizan en el main por lo cual inyectamos el template en el contenedor del main */
   document.querySelector("main").innerHTML = template();
+
+  /** Para la nav, que la habiamos ocultado en el login, la volvemos a renderizar cambiandole el display de none a flex */
   document.querySelector("nav").style.display = "flex";
-  addListeners();
+
+  /** metemos los escuchadores de la pagina */
+  addEventListeners();
+
+  /** y por ultimo traemos la info que hace la llamada asincrona a la api de pokemon y lo setea en el estado
+   */
+  //--------------------------------------------- LO NUEVO -------------------------
+  getInfo();
+  //---------------------------------------------------------------------------------
 };

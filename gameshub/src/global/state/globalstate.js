@@ -73,6 +73,15 @@ export const setData = (data, page) => {
   }
   return dataGlobal;
 };
+export const getData = (page) => {
+  switch (page) {
+    case "Pokemon":
+      return dataGlobal.pokemon;
+    default:
+      break;
+  }
+  return dataGlobal;
+};
 
 //! -------------------SET y GET  dde userData  --------------------------
 
