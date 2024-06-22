@@ -49,7 +49,7 @@ export const filterPokemon = (filterDataInputButton, donde) => {
       break;
     case "name":
       {
-        const filterdata = dataGlobal.pokemonData.filter((pokemon) =>
+        const filterData = dataGlobal.pokemonData.filter((pokemon) =>
           pokemon.name
             .toLowerCase()
             .includes(filterDataInputButton.toLowerCase())
@@ -64,10 +64,10 @@ export const filterPokemon = (filterDataInputButton, donde) => {
   }
 };
 
-export const getInfo=async()=> {
-    console.log("actualizando Info...👌🔍")
-    const data= await.dataPokemon()
-    setData(data,"Pokemon")
-}
+export const getInfo = async () => {
+  console.log("actualizando Info...👌🔍");
+  const data = await dataPokemon();
+  setData(data, "Pokemon");
+};
 
-getInfo()
+getInfo();
