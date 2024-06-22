@@ -4,8 +4,8 @@ import "./Login.css";
 
 const template = () => `
   <div id="containerLogin">
-    <h1 id="titleLogin">LOGIN</h1>
-    <input type="text" name="username" id="username" />
+    <h1 id="titleLogin">Who´s knocking?</h1>
+    <input type="text" name="username" id="username" placeholder="Your name, or just leave empty" />
     <button id="buttonLogin">That´s Me!</button>
   </div>
 `;
@@ -16,13 +16,6 @@ const addListeners = () => {
   buttonLogin.addEventListener("click", (e) => {
     const valueInput = username.value;
 
-    // como trabajo con el local lo convierto a string
-
-    /**
-     * Lo unico especial tiene este login es que comprueba si ya tenemos un usuario
-     * en el local con datos dee algun usuario con el mismo nombre
-     * y asi lo asocia para coger los me gusta de los pokemon
-     */
     if (localStorage.getItem(`${valueInput}USER`)) {
       const localUser = localStorage.getItem(`${valueInput}USER`);
       const parseUser = JSON.parse(localUser);
