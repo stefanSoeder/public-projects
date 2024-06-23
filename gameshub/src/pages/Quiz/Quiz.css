@@ -1,9 +1,5 @@
 
-#Enhorabuena{
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
+
 
 .containerQuiz{
   display:flex;
@@ -12,7 +8,7 @@
   align-items: center;
   text-align: center;
   gap: 10px;
-  padding-top: 20px;
+  padding: 16px;
 }
 
 .navBotones{
@@ -38,7 +34,7 @@ button:hover{
 .navigationButton{
   border-radius: 6px;
   width: 80px;
-  background-color: rgb(167, 158, 158);
+  background-color: var(--color2);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -53,6 +49,7 @@ button:hover{
   display: flex;
   flex-direction: row;
   font-size: 36px;
+  color: var(--color);
 }
 
 #previous{
@@ -110,4 +107,9 @@ button:hover{
     justify-content: center;
     align-items: center;
     
+  }
+  #Enhorabuena{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
   }

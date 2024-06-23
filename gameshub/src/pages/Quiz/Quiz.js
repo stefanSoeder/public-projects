@@ -145,34 +145,34 @@ const template = () => `
           <button id="r3" class="answer answer-btn incorrecta" data-answer="respuesta3">respuesta3</button>
           <button id="r4" class="answer answer-btn incorrecta" data-answer="respuesta4">respuesta4</button>
           <div class="navBotones"><h2 id="solution"></h2>
-          <button id="previous" class="navigationButton">ANTERIOR</button>
           <button id="next" class="navigationButton">SIGUIENTE</button></div>
         </div>
       </div>
     `;
 
-const updatePreviousButtonVisibility = () => {
+const nextButtonVisibility = () => {
   //*hace que se vea la opción de retroceder cuando el index no es 0*/
-  const navigatePrevious = document.getElementById("previous");
-  navigatePrevious.style.display = index === 0 ? "none" : "flex";
+  const navigateNext = document.getElementById("next");
+  navigateNext.style.display =
+    index === preguntasRespuestas.length - 1 ? "none" : "flex";
 };
 
 const addEventListeners = () => {
   //*botón de retroceder, permitiendo cargar pregunta anterior, y actualizando visibilidad*/
-  const navigatePrevious = document.getElementById("previous");
-  navigatePrevious.addEventListener("click", () => {
-    if (index > 0) {
-      index = getPreviousIndex();
-      loadQuestion();
-      updatePreviousButtonVisibility();
-    }
-  });
+  // const navigatePrevious = document.getElementById("previous");
+  // navigatePrevious.addEventListener("click", () => {
+  //   if (index > 0) {
+  //     index = getPreviousIndex();
+  //     loadQuestion();
+  // updatePreviousButtonVisibility();
+  //   }
+  // });
 
   const navigateNext = document.getElementById("next"); //*Igual para opción NEXT*/
   navigateNext.addEventListener("click", () => {
     index = getNextIndex(preguntasRespuestas.length);
     loadQuestion();
-    updatePreviousButtonVisibility();
+    nextButtonVisibility();
   });
 
   const respuestaUno = document.getElementById("r1"); //*los botones para seleccionar respuesta, se ejecuta función checkAnswer*/
@@ -200,10 +200,11 @@ const addEventListeners = () => {
 export const printQuizPage = () => {
   preguntasRespondidas = [];
   document.querySelector("main").innerHTML = template();
+
   loadQuestion();
-  const navigatePrevious = document.getElementById("previous");
-  navigatePrevious.style.display = "none";
-  navigatePrevious.style.opacity = "0.5";
+  // const navigatePrevious = document.getElementById("previous");
+  // navigatePrevious.style.display = "none";
+  // navigatePrevious.style.opacity = "0.5";
   addEventListeners();
   congratulationsTemplate();
 };
