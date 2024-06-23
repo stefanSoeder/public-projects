@@ -217,7 +217,7 @@ const congratulationsTemplate = () => `
     `;
 
 const loadQuestion = () => {
-  if (index === preguntasRespuestas.length) {
+  if (index === preguntasRespuestas.length - 1) {
     console.log(
       "🚀 ~ loadQuestion ~ preguntasRespuestas.length:",
       preguntasRespuestas.length
@@ -225,7 +225,7 @@ const loadQuestion = () => {
     document.querySelector("#Quiz").style.display = "none";
     const scoreElement = document.querySelector(".score");
     const congratulationsElement = document.createElement("div");
-    congratulationsElement.innerHTML = congratulationsTemplate(score);
+    congratulationsElement.innerHTML += congratulationsTemplate(score);
     scoreElement.parentElement.appendChild(congratulationsElement);
 
     const restartButton = document.getElementById("restartButton");

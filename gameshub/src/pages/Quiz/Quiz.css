@@ -79,8 +79,9 @@ button:hover{
   display: flex;
   color: white;
   background-color:  #cd7116;
-  align-self: flex-end;
-  position: fixed;
+  justify-content: center;
+  font-size: 16px;
+
 }
 
 #solution{
@@ -111,5 +112,7 @@ button:hover{
   #Enhorabuena{
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    justify-content: center;
+    gap: 5px; 
+    font-size: 32px;
   }
