@@ -1,7 +1,4 @@
-import {
-  getNextIndex,
-  getPreviousIndex,
-} from "../../components/ButtonQuiz/ButtonQuiz";
+import { getNextIndex } from "../../components/ButtonQuiz/ButtonQuiz";
 import { getUserData } from "../../global/state/globalstate";
 import "./Quiz.css";
 
@@ -237,7 +234,12 @@ const loadQuestion = () => {
       score = 0;
       document.getElementById("score").innerText = score;
       index = 0;
-      preguntasRespondidas = [];
+      console.log("🚀 ~ restartButton.addEventListener ~ index:", index);
+      preguntasRespondidas.length = 0;
+      console.log(
+        "🚀 ~ restartButton.addEventListener ~ preguntasRespondidas:",
+        preguntasRespondidas
+      );
       congratulationsElement.remove();
       printQuizPage();
     });

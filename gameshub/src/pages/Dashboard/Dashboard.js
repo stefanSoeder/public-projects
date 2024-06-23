@@ -19,7 +19,7 @@ const template = () => `
             src="https://res.cloudinary.com/dhu1it9x8/image/upload/v1706571815/DragonShooter_yujgs2.png"
             alt="go to dragon shooter game"
           />
-          <h2>WACKA TOPO</h2>
+          <h2>DRAGON SHOOTER</h2>
         </figure>
       </li>
       <li>
@@ -28,7 +28,7 @@ const template = () => `
             src="https://res.cloudinary.com/dhu1it9x8/image/upload/v1706558125/libros-de-texto_nuzhc0.png"
             alt="go to fantasy quiz game"
           />
-          <h2>MEMORY GAME</h2>
+          <h2>FANTASY TRIVIA</h2>
         </figure>
       </li>
     </ul>
