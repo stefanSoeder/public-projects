@@ -200,7 +200,6 @@ const addEventListeners = () => {
 export const printQuizPage = () => {
   preguntasRespondidas = [];
   document.querySelector("main").innerHTML = template();
-  document.querySelector("nav").style.display = "flex";
   loadQuestion();
   const navigatePrevious = document.getElementById("previous");
   navigatePrevious.style.display = "none";

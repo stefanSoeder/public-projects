@@ -1,117 +1,113 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  #Enhorabuena{
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-  }
+
+#Enhorabuena{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.containerQuiz{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  padding-top: 20px;
+}
+
+.navBotones{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  max-width: 800px;
+  align-items: center;
+  align-content: space-between;
+
+}
+
+button{
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  height: 30px;
+  border-radius: 6px;
+}
+button:hover{
+  background: orange;
+  transition: 0.3s;
+}
+.navigationButton{
+  border-radius: 6px;
+  width: 80px;
+  background-color: rgb(167, 158, 158);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content:center; 
+  padding: 16px;
+  gap: 8px;
+}
+.score{
+  justify-content: right;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  font-size: 36px;
+}
+
+#previous{
+  display: flex;
+  background: #35af5891;
+  color: rgb(73, 27, 94);
+  align-self: flex-start;
   
-  .containerQuiz{
-    display:flex;
-    flex-direction: column;
+}
+#next{
+  display: flex;
+  color: white;
+  background-color:  #7140b5;
+  padding: 16px;
+  width: 100%;
+}
+
+#submit{
+  display: flex;
+  color: white;
+  background-color:  #cd7116;
+  align-self: flex-end;
+  position: fixed;
+}
+
+#restartButton{
+  display: flex;
+  color: white;
+  background-color:  #cd7116;
+  align-self: flex-end;
+  position: fixed;
+}
+
+#solution{
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 15px;
+}
+#Quiz{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  font-size: medium;
+  min-width: 200px;
+  max-width: 600px;
+  gap:8px;
+  padding-bottom: 16px;
+}
+  #question{
+    padding: 8px;
+    display: flex;
+    text-align: center;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    gap: 10px;
-    padding-top: 20px;
-  }
-  
-  .navBotones{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    max-width: 800px;
-    align-items: center;
-    align-content: space-between;
-  }
-  
-  button{
-    background-color: rgb(255, 255, 255);
-    width: 100%;
-    height: 30px;
-  }
-  button:hover{
-    background: orange;
-    transition: 0.3s;
-  }
-  .navigationButton{
-    border-radius: 30%;
-    width: 80px;
-    background-color: rgb(167, 158, 158);
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content:center; 
-    margin-top: 35px;
-  }
-  .score{
-    justify-content: right;
-    text-align: center;
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-    font-size: 52px;
-  }
-  
-  #previous{
-    display: flex;
-    background: #35af5891;
-    color: rgb(73, 27, 94);
-    align-self: flex-start;
-    position: fixed;
     
   }
-  #next{
-    display: flex;
-    color: white;
-    background-color:  #7140b5;
-    align-self: flex-end;
-    position: fixed;
-  }
-
-  #submit{
-    display: flex;
-    color: white;
-    background-color:  #cd7116;
-    align-self: flex-end;
-    position: fixed;
-  }
-
-  #restartButton{
-    display: flex;
-    color: white;
-    background-color:  #cd7116;
-    align-self: flex-end;
-    position: fixed;
-  }
-  
-  #solution{
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin-bottom: 15px;
-  }
-  #Quiz{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: center;
-    font-size: medium;
-    min-width: 200px;
-    max-width: 600px;
-    height: 410px;
-    gap:4px;
-    ;
-  }
-    #question{
-      min-height: 200px;
-      display: flex;
-      text-align: center;
-      justify-content: center;
-      align-items: center;
-      
-    }
-      ;
