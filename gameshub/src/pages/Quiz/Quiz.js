@@ -2,7 +2,9 @@ import {
   getNextIndex,
   getPreviousIndex,
 } from "../../components/ButtonQuiz/ButtonQuiz";
+import { getUserData } from "../../global/state/globalstate";
 import "./Quiz.css";
+
 const preguntasRespuestas = [
   {
     pregunta: "1. ¿Quién es el autor de la serie 'Canción de Hielo y Fuego' ?",
@@ -135,6 +137,7 @@ let index = 0;
 let score = 0;
 let preguntasRespondidas = [];
 
+const player = getUserData();
 const template = () => `
       <div class="containerQuiz">
         <div class="score">Score: <span id="score">0</span></div>
@@ -211,7 +214,7 @@ export const printQuizPage = () => {
 
 const congratulationsTemplate = () => `
     <div id="Enhorabuena">
-    <p>Enhorabuena!! Has respondido ${score} de 15 preguntas correctamente</p>
+    <p>Enhorabuena ${player.name}!! <br> Has respondido ${score} de 15 preguntas correctamente</p>
     <button id="restartButton">Volver a jugar</button>
     </div>
     `;
