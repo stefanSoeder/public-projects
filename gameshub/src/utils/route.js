@@ -2,6 +2,7 @@ import { getUser } from "../global/state/globalstate";
 import {
   Login,
   PrintPokemonPage,
+  printDragonShooterPage,
   printQuizPage,
   printTemplateDashboard,
 } from "../pages";
@@ -23,6 +24,9 @@ export const initControler = (pagesRender) => {
       break;
     case "Quiz":
       printQuizPage();
+      break;
+    case "DragonShooter":
+      printDragonShooterPage();
       break;
     case "Login":
       Login();

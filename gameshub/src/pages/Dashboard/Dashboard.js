@@ -14,7 +14,7 @@ const template = () => `
         </figure>
       </li>
       <li>
-        <figure>
+        <figure id="navigateDragonShooter">
           <img
             src="https://res.cloudinary.com/dhu1it9x8/image/upload/v1706571815/DragonShooter_yujgs2.png"
             alt="go to dragon shooter game"
@@ -43,6 +43,12 @@ const addEventListeners = () => {
   const navigateQuiz = document.getElementById("navigateQuiz");
   navigateQuiz.addEventListener("click", (e) => {
     initControler("Quiz");
+  });
+  const navigateDragonShooter = document.getElementById(
+    "navigateDragonShooter"
+  );
+  navigateDragonShooter.addEventListener("click", (e) => {
+    initControler("DragonShooter");
   });
 };
 

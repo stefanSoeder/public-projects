@@ -101,6 +101,21 @@ export const setUserData = (data) => {
   localStorage.setItem(`${currentUser.name}`, stringUser);
 };
 
+const interval = {
+  DragonShooter: "",
+  DragonShooterTime: "",
+};
 export const getUserData = () => {
   return userData;
+};
+export const setIntervalDragonShooter = (intervalId) => {
+  interval.DragonShooter = intervalId;
+};
+
+export const setIntervalDragonShooterTimer = (intervalId) => {
+  interval.DragonShooterTime = intervalId;
+};
+
+export const getIntervalDragonShooter = () => {
+  return interval;
 };
