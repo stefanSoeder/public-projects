@@ -1,4 +1,13 @@
 /* style.css*/
+@font-face {
+  font-family: 'Single Day';
+  src: url('/fonts/SingleDay.woff2') format('woff2'),
+       url('/fonts/SingleDay.woff') format('woff'),
+       url('/fonts/SingleDay.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap; /* Para mejorar el rendimiento */
+}
 
 * {
     padding: 0;
